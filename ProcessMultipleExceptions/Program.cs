@@ -18,8 +18,9 @@ namespace ProcessMultipleExceptions
                 // Trip Arg out of range exception.
                 myCar.Accelerate(-10);
             }
-            catch (CarIsDeadException e)
+            catch (CarIsDeadException e) when (e.ErrorTimeStamp.DayOfWeek != DayOfWeek.Friday)
             {
+                Console.WriteLine("Catching car is dead!");
                 Console.WriteLine(e.Message);
             }
             catch (ArgumentOutOfRangeException e)

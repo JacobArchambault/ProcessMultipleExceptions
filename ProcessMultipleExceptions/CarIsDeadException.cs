@@ -12,6 +12,7 @@ namespace ProcessMultipleExceptions
         public DateTime ErrorTimeStamp { get; set; }
         public string CauseOfError { get; set; }
 
+
         public CarIsDeadException() { }
         public CarIsDeadException(string message) : base(message) { }
         public CarIsDeadException(string message, string cause, DateTime time)
